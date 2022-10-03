@@ -1,0 +1,56 @@
+@use 'variables' as s;
+@use 'mixins' as m;
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: s.$fuenteUno;       
+    background: s.$violet;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.fondo_img{
+    background: url(../../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+
+    @include m.laptop{
+        background: url(../../images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @include m.movil{       
+        background: url(../../images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.contenedor{
+    width: 95%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(225, 8%, 81%); }

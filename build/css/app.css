@@ -1,0 +1,252 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: hsl(257deg, 40%, 49%);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fondo_img {
+  background: url(../../images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+@media (max-width: 1280px) {
+  .fondo_img {
+    background: url(../../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 375px) {
+  .fondo_img {
+    background: url(../../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.contenedor {
+  width: 95%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(225deg, 8%, 81%);
+}
+
+.header img {
+  width: 15%;
+  padding-top: 5rem;
+  padding-bottom: 9rem;
+}
+@media (max-width: 1280px) {
+  .header img {
+    padding-top: 4rem;
+    padding-bottom: 7.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .header img {
+    width: 50%;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .header img {
+    width: 45%;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.main {
+  position: relative;
+}
+
+.menu {
+  display: flex;
+}
+.menu .windows {
+  width: 50%;
+}
+.menu .windows img {
+  width: 100%;
+  height: 100%;
+}
+.menu .decripcion {
+  width: 50%;
+  padding: 3.5rem;
+}
+@media (max-width: 1280px) {
+  .menu .windows {
+    width: 52%;
+  }
+  .menu .decripcion {
+    width: 48%;
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+  .menu .windows {
+    width: 100%;
+  }
+  .menu .decripcion {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0rem;
+  }
+}
+@media (max-width: 375px) {
+  .menu {
+    flex-direction: column;
+  }
+  .menu .windows {
+    width: 100%;
+  }
+  .menu .decripcion {
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+    padding: 0rem;
+  }
+}
+
+.decripcion .titulo {
+  width: 90%;
+  font-size: 5rem;
+  font-family: "Open Sans", sans-serif;
+  color: #FFF;
+}
+.decripcion P {
+  font-size: 2.3rem;
+  font-family: "Open Sans", sans-serif;
+  color: #FFF;
+}
+@media (max-width: 1280px) {
+  .decripcion .titulo {
+    font-size: 4.5rem;
+  }
+  .decripcion P {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    font-weight: 100;
+  }
+}
+@media (max-width: 768px) {
+  .decripcion .titulo {
+    width: 100%;
+    font-size: 6rem;
+    text-align: center;
+  }
+  .decripcion P {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    font-weight: 100;
+  }
+}
+@media (max-width: 375px) {
+  .decripcion .titulo {
+    width: 100%;
+    font-size: 2.3rem;
+  }
+  .decripcion P {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    font-weight: 100;
+  }
+}
+.decripcion .btn {
+  background: #FFF;
+  width: 30%;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 6px -2px rgba(0, 0, 0, 0.93);
+  box-shadow: 5px 5px 6px -2px rgba(0, 0, 0, 0.93);
+}
+@media (max-width: 768px) {
+  .decripcion .btn {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 375px) {
+  .decripcion .btn {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+.footer p {
+  margin-bottom: 1rem;
+}
+
+.redes {
+  display: flex;
+  justify-content: flex-end;
+}
+.redes svg {
+  width: 3%;
+  height: 33%;
+  margin-left: 1rem;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .redes {
+    justify-content: center;
+  }
+  .redes svg {
+    width: 10%;
+    height: 10%;
+  }
+}
+@media (max-width: 375px) {
+  .redes {
+    justify-content: center;
+  }
+  .redes svg {
+    width: 13%;
+    height: 13%;
+  }
+}

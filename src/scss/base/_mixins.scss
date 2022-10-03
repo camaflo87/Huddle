@@ -1,0 +1,19 @@
+@use 'base/variables' as s;
+
+@mixin movil {
+    @media (max-width: s.$mobile){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: s.$table){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: s.$laptop){
+        @content;
+    }
+}

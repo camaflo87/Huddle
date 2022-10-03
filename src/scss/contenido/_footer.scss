@@ -1,0 +1,39 @@
+@use 'base/variables' as s;
+@use 'base/mixins' as m;
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+.redes{
+    display: flex;
+    justify-content: flex-end;
+    svg{
+        width: 3%;
+        height: 33%;
+        margin-left: 1rem;
+        border: 2px solid #FFF;
+        border-radius: 50%;
+    }
+
+    @include m.tablet{
+        justify-content: center;
+        svg{
+            width: 10%;
+            height: 10%;
+        }
+    }
+
+    @include m.movil{
+        justify-content: center;
+        svg{
+            width: 13%;
+            height: 13%;
+        }
+    }
+}

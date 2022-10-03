@@ -1,0 +1,33 @@
+@use 'base/variables' as s;
+@use 'base/mixins' as m;
+
+.header{
+    img{
+        width: 15%;
+        padding-top: 5rem;
+        padding-bottom: 9rem;
+    }
+
+    @include m.laptop{
+        img{
+            padding-top: 4rem;
+            padding-bottom: 7.5rem;
+        }
+    }
+
+    @include m.tablet{
+        img{
+            width: 50%;
+            padding-top: 3rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    @include m.movil{
+        img{
+            width: 45%;
+            padding-top: 3rem;
+            padding-bottom: 5rem;
+        }
+    }
+}

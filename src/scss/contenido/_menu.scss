@@ -1,0 +1,138 @@
+@use 'base/variables' as s;
+@use 'base/mixins' as m;
+
+.menu{
+    display: flex;
+
+    .windows{
+        width: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .decripcion{
+        width: 50%;
+        padding: 3.5rem;
+    }
+
+    @include m.laptop{     
+        .windows{
+            width: 52%;
+        }
+        .decripcion{
+            width: 48%;
+            padding: 2rem;
+        }
+    }
+
+    @include m.tablet{
+        flex-direction: column;
+        .windows{
+            width: 100%;
+        }
+        .decripcion{
+            width: 100%;
+            margin-top: 1rem;
+            text-align: center;
+            padding: 0rem;
+        }
+    }
+
+    @include m.movil{
+        flex-direction: column;
+        .windows{
+            width: 100%;
+        }
+        .decripcion{
+            width: 100%;
+            margin-top: 4rem;
+            text-align: center;
+            padding: 0rem;
+        }
+    }
+}
+
+.decripcion{
+    .titulo{
+        width: 90%;
+        font-size: 5rem;
+        font-family: s.$fuenteDos;
+        color: #FFF;
+    }  
+
+    P{
+        font-size: 2.3rem;
+        font-family: s.$fuenteDos;
+        color: #FFF;
+    }
+
+    @include m.laptop{
+        .titulo{
+            font-size: 4.5rem;
+        }
+
+        P{
+            font-size: 1.7rem;
+            line-height: 2.5rem;
+            font-weight: 100;
+        }
+    }
+
+    @include m.tablet{
+        .titulo{
+            width: 100%;
+            font-size: 6rem;
+            text-align: center;
+        }
+
+        P{
+            font-size: 1.7rem;
+            line-height: 2.5rem;
+            font-weight: 100;
+        }
+    }
+
+     @include m.movil{
+        .titulo{
+            width: 100%;
+            font-size: 2.3rem;
+        }
+
+        P{
+            font-size: 1.7rem;
+            line-height: 2.5rem;
+            font-weight: 100;
+        }
+    }
+
+    .btn{
+        background: #FFF;
+        width: 30%;
+        text-align: center;
+        padding: 2rem;
+        border-radius: 2.5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        -webkit-box-shadow: 5px 5px 6px -2px rgba(0,0,0,0.93); 
+        box-shadow: 5px 5px 6px -2px rgba(0,0,0,0.93);
+    }
+
+    @include m.tablet{
+        .btn{
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+    }
+
+    @include m.movil{
+        .btn{
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
